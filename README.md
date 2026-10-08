@@ -1,6 +1,6 @@
 # AWS Multi-Architecture C Application Deployment
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates the deployment of a C application across multiple CPU architectures using AWS EC2, Docker, Amazon ECR, Amazon S3, and IAM.
 
@@ -13,7 +13,7 @@ The project demonstrates architecture-specific compilation, Docker containerizat
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
                          AWS Cloud
                             │
@@ -38,7 +38,7 @@ The project demonstrates architecture-specific compilation, Docker containerizat
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 | Technology | Purpose |
 |---|---|
@@ -53,7 +53,7 @@ The project demonstrates architecture-specific compilation, Docker containerizat
 
 ---
 
-## 🖥️ EC2 Instances
+## EC2 Instances
 
 ### x86_64 Instance
 
@@ -85,7 +85,7 @@ Output:
 
 ---
 
-## 🔐 Security Group Configuration
+## Security Group Configuration
 
 An EC2 security group was configured to allow SSH access.
 
@@ -120,7 +120,7 @@ The x86_64 instance produced an x86-64 ELF executable, while the ARM64 instance 
 
 ---
 
-## 🔧 GCC Compilation
+## GCC Compilation
 
 GCC was installed on both EC2 instances.
 
@@ -148,7 +148,7 @@ This confirms that the same C source code can be compiled into architecture-spec
 
 ---
 
-## 🐳 Docker Setup
+## Docker Setup
 
 Docker was installed and enabled on both EC2 instances.
 
@@ -170,7 +170,7 @@ Verify Docker:
 
 ---
 
-## 📦 Docker Image
+## Docker Image
 
 A Dockerfile was created using GCC as the base image.
 
@@ -188,7 +188,7 @@ The resulting image is:
 
 ---
 
-## ☁️ Amazon ECR
+## Amazon ECR
 
 A private Amazon ECR repository was created:
 
@@ -210,7 +210,7 @@ Push the image:
 
 ---
 
-## 🪣 Amazon S3 Artifact Storage
+## Amazon S3 Artifact Storage
 
 An S3 bucket was created for storing application artifacts:
 
@@ -228,7 +228,7 @@ The application binary is therefore stored centrally in Amazon S3.
 
 ---
 
-## 🔑 IAM Role
+## IAM Role
 
 An IAM role named:
 
@@ -246,7 +246,7 @@ This provides a secure method for EC2 instances to interact with AWS services.
 
 ---
 
-## 🔄 Project Workflow
+## Project Workflow
 
     1. Create Amazon ECR Private Repository
                     ↓
@@ -286,7 +286,7 @@ This provides a secure method for EC2 instances to interact with AWS services.
 
 ---
 
-## 📁 AWS Resources
+## AWS Resources
 
 ### Amazon EC2
 
@@ -307,7 +307,7 @@ This provides a secure method for EC2 instances to interact with AWS services.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Understand x86_64 and ARM64 CPU architectures.
 - Deploy the same application on different EC2 architectures.
@@ -321,7 +321,7 @@ This provides a secure method for EC2 instances to interact with AWS services.
 
 ---
 
-## 📊 Architecture Comparison
+## Architecture Comparison
 
 | Feature | x86_64 | ARM64 |
 |---|---|---|
@@ -334,7 +334,7 @@ This provides a secure method for EC2 instances to interact with AWS services.
 
 ---
 
-## 🧪 Verification
+## Verification
 
 The following commands were used during the deployment to verify the environment:
 
@@ -360,7 +360,7 @@ These commands verify the CPU architecture, compiler, application execution, bin
 
 ---
 
-## ✅ Result
+## Result
 
 The C application was successfully compiled and executed on both x86_64 and ARM64 EC2 instances.
 
@@ -376,6 +376,6 @@ Overall, the project successfully demonstrates the fundamentals of deploying a C
 
 ---
 
-## 👨‍💻 Project Summary
+## Project Summary
 
 This project provides a practical demonstration of **multi-architecture application deployment on AWS**, covering the complete workflow from compiling a C application on different CPU architectures to containerization, artifact storage, IAM-based access, and Docker image management using Amazon ECR.
