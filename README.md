@@ -26,12 +26,12 @@ The project demonstrates architecture-specific compilation, Docker containerizat
               │
         ┌─────┴─────┐
         │           │
-   EC2 x86_64    EC2 ARM64
-   c-app-x86     c-app-graviton
+    EC2 x86_64    EC2 ARM64
+    c-app-x86    c-app-gravitation
         │           │
        GCC         GCC
         │           │
-   C Application C Application
+    C-Application  C-Application
         │           │
      x86-64       ARM64
      Binary       Binary
